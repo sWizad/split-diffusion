@@ -108,7 +108,7 @@ def create_config(model_name='u256', timestep_rp=50):
             'model_path' :'symlink/pretrained/256x256_diffusion_uncond.pt',
             'classifier_path':'symlink/pretrained/256x256_classifier.pt',
             'image_size': 256,
-            'batch_size' : 6,
+            'batch_size' : 20,
             'use_ddim':False,
             'clip_denoised':True,
             'classifier_scale': 10.0,

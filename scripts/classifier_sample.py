@@ -76,11 +76,6 @@ def main():
         assert y is not None
         return model(x, t, y if model_config['class_cond'] else None)
 
-    fixseed = True
-    if fixseed: # setting seed
-        worker_seed = 10
-        np.random.seed(worker_seed)
-        th.manual_seed(worker_seed)
 
     if args.method == 'ddim':
         sample_fn = diffusion.ddim_sample_loop
