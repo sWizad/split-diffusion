@@ -1,5 +1,15 @@
 # Accelerating Guided Diffusion Sampling with Splitting Numerical Methods
-The implementation for [Accelerating Guided Diffusion Sampling with Splitting Numerical Methods](https://openreview.net/forum?id=F0KTk2plQzO) (2023)
+The Official implementation for 
+
+**Accelerating Guided Diffusion Sampling with Splitting Numerical Methods** (2023)
+
+by Suttisak Wizadwongsa and Supasorn Suwajanakorn.
+
+[ArXiv](https://arxiv.org/abs/2301.11558), [OpenReview](https://openreview.net/forum?id=F0KTk2plQzO) 
+
+_Abstrace_: Guided diffusion is a technique for conditioning the output of a diffusion model at sampling time without retraining the network for each specific task. One drawback of diffusion models, however, is their slow sampling process. Recent techniques can accelerate unguided sampling by applying high-order numerical methods to the sampling process when viewed as differential equations. On the contrary, we discover that the same techniques do not work for guided sampling, and little has been explored about its acceleration. This paper explores the culprit of this problem and provides a solution based on operator splitting methods, motivated by our key finding that classical high-order numerical methods are unsuitable for the conditional function. Our proposed method can re-utilize the high-order methods for guided sampling and can generate images with the same quality as a 250-step DDIM baseline using 32-58% less sampling time on ImageNet256. We also demonstrate usage on a wide variety of conditional generation tasks, such as text-to-image generation, colorization, inpainting, and super-resolution.
+
+![Teaser image](./resource/Teaser.jpg)
 
 This repository is based on [openai/improved-diffusion](https://github.com/openai/improved-diffusion) and [crowsonkb/guided-diffusion](https://github.com/crowsonkb/guided-diffusion), with modifications on sampling method.
 
@@ -30,8 +40,17 @@ Some example of `--method` options are ```stsp4, stsp2, ltsp4, ltsp2, plms4, plm
 
 # Other tasks
 For detailed usage example, see the notebooks directory.
-
-- **Stable Diffusion**: [![][colab]][SD-text2im] This notebook shows how to use Splitting Numerical Methods with CLIP-guided Stable Diffusion.
+![img](resource/ss1.jpg)
+- **CLIP-guided Stable Diffusion**: [![][colab]][SD-clip] This notebook shows how to use Splitting Numerical Methods with CLIP-guided Stable Diffusion.
 
 [colab]: <https://colab.research.google.com/assets/colab-badge.svg>
 [SD-text2im]: <https://colab.research.google.com/drive/1uDArGUikVwuNVPX6KRVnSxIjfd6vJeZ1?usp=sharing>
+
+
+<img src="https://raw.githubusercontent.com/sWizad/split-diffusion/master/resource/ss2.jpg" data-canonical-src="https://raw.githubusercontent.com/sWizad/split-diffusion/master/resource/ss2.jpg" width="700"  />
+
+- **DreamBooth Stable Diffusion**: [![][colab]][SD-dream] This notebook shows how to use Splitting Numerical Methods with fine-tuned Stable Diffusion.
+
+[colab]: <https://colab.research.google.com/assets/colab-badge.svg>
+[SD-clip]: <https://colab.research.google.com/drive/1uDArGUikVwuNVPX6KRVnSxIjfd6vJeZ1?usp=sharing>
+[SD-dream]: <https://colab.research.google.com/drive/1uDArGUikVwuNVPX6KRVnSxIjfd6vJeZ1?usp=sharing>
