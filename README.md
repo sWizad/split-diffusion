@@ -53,4 +53,4 @@ For detailed usage example, see the notebooks directory.
 
 [colab]: <https://colab.research.google.com/assets/colab-badge.svg>
 [SD-clip]: <https://colab.research.google.com/drive/1uDArGUikVwuNVPX6KRVnSxIjfd6vJeZ1?usp=sharing>
-[SD-dream]: <https://colab.research.google.com/drive/1uDArGUikVwuNVPX6KRVnSxIjfd6vJeZ1?usp=sharing>
+[SD-dream]: <https://colab.research.google.com/drive/1xm3JZgh_DR6GJnlmmcz36SiLZ0ECVVqp?usp=sharing>
